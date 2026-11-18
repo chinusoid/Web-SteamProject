@@ -3,14 +3,14 @@ Team Eggs | SE-2507 | 18 November 2026
 
 Live website: https://chinusoid.github.io/Web-SteamProject/
 Repository: https://github.com/chinusoid/Web-SteamProject
-Verified application commit: 56e3a1a7a06d6f04ef4d63e580e8980788176f42
-Successful application deployment: https://github.com/chinusoid/Web-SteamProject/actions/runs/44283546532
+Verified application commit: 44f4b7be2073f96e07942db95801907fbddbb04e
+Successful application deployment: https://github.com/chinusoid/Web-SteamProject/actions/runs/44287799775
 
-RESULT: 34/34 acceptance scenario groups PASS directly against the published GitHub Pages origin.
+RESULT: 35/35 acceptance scenario groups PASS directly against the published GitHub Pages origin.
 Uncaught application JavaScript errors: 0. Broken own-origin HTTP responses: 0.
 14 pages x 3 widths (375/768/1440) x 2 themes = 84 responsive combinations.
-Published asset/link crawl: 72 unique resources and 87 anchor links.
-Source comparison: 58/58 published app/assets return HTTP 200 and match the prepared files.
+Published asset/link crawl: 74 unique resources and 87 anchor links.
+Source comparison: 60/60 published app/assets return HTTP 200 and match the prepared files.
 
 REQUIREMENTS
 Responsiveness: PASS - Flexbox/Grid/Bootstrap, all pages in both themes and representative screenshot review.
@@ -43,6 +43,7 @@ FINAL FIXES
 6. script.js moved to js/script.js and js/assignment5.js renamed to js/interactions.js; comments describe complex code.
 7. game-details.html shows any catalogue game (overview, tags, facts, gallery) with buy and rating controls; "More details" links on every card and in the carousel; unknown ids show "Game not found".
 8. About page lists email and Telegram contacts for each team member.
+9. EN/RU/KZ language switcher on all 14 pages (js/i18n.js + js/i18n-final.js): dynamic messages, dialogs, validation and API status lines are translated; the choice is saved in localStorage and English is restored exactly.
 
 API AT CHECK TIME
 https://www.gamerpower.com/api/giveaways?platform=pc&sort-by=date -> HTTP 200, 100 items.

@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-18T10:16:07.419Z",
+  "date": "2026-11-18T10:42:54.455Z",
   "baseURL": "https://chinusoid.github.io/Web-SteamProject",
   "results": [
     {
@@ -28,6 +28,10 @@
     },
     {
       "name": "Existing account email cannot be registered a second time",
+      "passed": true
+    },
+    {
+      "name": "Language switcher: EN/RU/KZ on every page, saved across pages, dynamic text translated, English restored exactly",
       "passed": true
     },
     {

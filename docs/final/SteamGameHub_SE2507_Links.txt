@@ -2,11 +2,11 @@ Steam Game Hub - Team Eggs - SE-2507 - Final Project
 
 GitHub Repository: https://github.com/chinusoid/Web-SteamProject
 Live Website: https://chinusoid.github.io/Web-SteamProject/
-Final Release (all three submission files): https://github.com/chinusoid/Web-SteamProject/releases/tag/v2.0.4-final
+Final Release (all three submission files): https://github.com/chinusoid/Web-SteamProject/releases/tag/v2.0.5-final
 
-Project ZIP: https://github.com/chinusoid/Web-SteamProject/releases/download/v2.0.4-final/SteamGameHub_SE2507_FinalProject.zip
-PDF Report: https://github.com/chinusoid/Web-SteamProject/releases/download/v2.0.4-final/SteamGameHub_SE2507_Report.pdf
-Links TXT: https://github.com/chinusoid/Web-SteamProject/releases/download/v2.0.4-final/SteamGameHub_SE2507_Links.txt
+Project ZIP: https://github.com/chinusoid/Web-SteamProject/releases/download/v2.0.5-final/SteamGameHub_SE2507_FinalProject.zip
+PDF Report: https://github.com/chinusoid/Web-SteamProject/releases/download/v2.0.5-final/SteamGameHub_SE2507_Report.pdf
+Links TXT: https://github.com/chinusoid/Web-SteamProject/releases/download/v2.0.5-final/SteamGameHub_SE2507_Links.txt
 
 Create Account: https://chinusoid.github.io/Web-SteamProject/community.html#join-community
 Log In: https://chinusoid.github.io/Web-SteamProject/login.html

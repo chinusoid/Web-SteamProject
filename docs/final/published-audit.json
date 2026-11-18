@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-18T10:17:30.672Z",
+  "date": "2026-11-18T10:44:11.698Z",
   "baseURL": "https://chinusoid.github.io/Web-SteamProject",
   "results": [
     {
@@ -60,7 +60,7 @@
     }
   ],
   "assetInventory": {
-    "uniqueResources": 72,
+    "uniqueResources": 74,
     "anchorLinks": 87
   },
   "uncaughtJavaScriptErrors": [],
