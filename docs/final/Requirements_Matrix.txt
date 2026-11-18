@@ -9,7 +9,7 @@ Animated UI (5): card lift, image zoom, button transitions, spinner, toasts/prog
 External API (10): GamerPower giveaways, fetch/async-await, loading/error/empty/retry, platform filters, labelled offline preview and attribution. Actual browser CORS fetch verified.
 Cohesion (10): every major feature supports game discovery and player collections.
 Presentation (5): Presentation_Notes.txt with 4:45 plan, all four speakers and backup screenshots. Team must rehearse and deliver the talk.
-Published acceptance: 33/33 scenario groups, 61 unique resources and 85 anchor links checked. See Final_Acceptance.txt, verification-live.json and published-audit.json.
+Published acceptance: 34/34 scenario groups, 72 unique resources and 87 anchor links checked. See Final_Acceptance.txt, verification-live.json and published-audit.json.
 Code quality (5): organized HTML, css/, js/, images/, vendor/, tests/, docs/final/; focused shared modules.
 
 Pages: Store, Library, All games, Featured, Categories, Community, News, About, Support, Responsive showcase, Log in, Profile, Live giveaways.

@@ -2,7 +2,7 @@
 
 Team **Eggs**, group **SE-2507**, Web Technologies I.
 
-**[Live website](https://chinusoid.github.io/Web-SteamProject/)** · **[Final submission files](https://github.com/chinusoid/Web-SteamProject/releases/tag/v2.0.3-final)**
+**[Live website](https://chinusoid.github.io/Web-SteamProject/)** · **[Final submission files](https://github.com/chinusoid/Web-SteamProject/releases/tag/v2.0.4-final)**
 
 A continuation of the team's Assignment 6 game hub: discover games, try virtual purchases, build a local collection, rate games and explore current giveaways. Independent student project; no affiliation with Valve or Steam.
 
