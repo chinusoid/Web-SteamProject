@@ -31,7 +31,7 @@ h3 { font-size: 21px; line-height: 1.25; margin: 0 0 12px; }
 footer { border-top: 1px solid #36536b; padding-block: 28px; background: #171d25; color: #b4c2ce; font-size: 13px; }
 footer p { margin: 0 0 8px; }
 :focus-visible { outline: 3px solid #a5dfff; outline-offset: 4px; }
-.skip-link { position: absolute; left: 16px; top: 8px; transform: translateY(-160%); padding: 12px 18px; background: #171d25; }
+.skip-link, [data-bs-theme] .skip-link { position: absolute; left: 16px; top: 8px; transform: translateY(-160%); padding: 12px 18px; background: #171d25; color: #fff; }
 .skip-link:focus { transform: none; }
 @media (min-width: 768px) {
   h1 { font-size: 52px; }
@@ -54,3 +54,5 @@ footer p { margin: 0 0 8px; }
 .language-switcher select { appearance:none; width:54px; height:44px; min-height:44px; padding:0; color:#e6edf3; background:#101820; border:1px solid #56718a; border-radius:12px; font:inherit; font-size:16px; text-align:center; text-align-last:center; cursor:pointer; }
 .language-switcher select:focus-visible { outline:3px solid #a5dfff; outline-offset:3px; }
 @media(max-width:520px) { .language-switcher { width:100%; justify-content:flex-end; } }
+/* Standalone page: keep the skip link readable on its dark chip in both themes. */
+[data-bs-theme] a.skip-link:not(.btn) { color:#fff !important; }

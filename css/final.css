@@ -149,3 +149,14 @@ html[data-bs-theme=light] { color-scheme:light; --bs-body-bg:#eff4f8; --bs-body-
 .account-tools .language-switcher { order:-1; margin-left:0; }
 .language-switcher select { width:46px; height:34px; min-height:34px; font-size:11px; color:#d6e9f6; background:#243747; border:1px solid #4a6477; border-radius:3px; }
 [data-bs-theme=light] .language-switcher select { color:#173e5a; background:#fff; border-color:#9cb8cb; }
+/* Readable contrast (WCAG AA) for light-mode text that kept dark-mode colours. */
+[data-bs-theme=light] .catalogue-empty p { color:#4e6578; }
+[data-bs-theme=light] .legacy-tools summary { color:#244f70; }
+[data-bs-theme=light] .wallet-banner-icon { color:#345d13; background:#e3f0d2; border-color:#6f9a3b88; }
+/* Artwork for the genre cards, the support page and the guest profile. */
+.genre-card .genre-cover { display:block; width:calc(100% + 3rem); max-width:none; height:auto; aspect-ratio:16/9; object-fit:cover; margin:-1.5rem -1.5rem 1rem; border-radius:var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius) 0 0; }
+.contact-art { display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:cover; margin-top:12px; border-radius:4px; border:1px solid #ffffff14; }
+.profile-gate { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.2fr); gap:28px; align-items:center; }
+.profile-gate-art { display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:cover; border-radius:4px; }
+@media(max-width:650px) { .profile-gate { grid-template-columns:1fr; gap:18px; } }
+.registration-stepper li>span { color:#e6f1f8; }

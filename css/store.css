@@ -70,7 +70,7 @@ body.store-page { background:radial-gradient(ellipse at 48% 120px,#23435c 0, #14
 .feature-bottom { margin-top:auto; padding-top:25px; display:flex; align-items:end; justify-content:space-between; gap:10px; }
 .feature-bottom .feature-label { font-size:7px; }
 .feature-bottom strong { font-size:14px; font-weight:400; }
-.buy-button { display:inline-flex; align-items:center; justify-content:center; gap:7px; color:#ecf9d6 !important; background:linear-gradient(100deg,#709f26,#477317); padding:9px 13px; border:1px solid #87a95444; border-radius:2px; font-size:12px; line-height:1.4; text-decoration:none; transition:filter .2s,transform .2s; white-space:nowrap; }
+.buy-button { display:inline-flex; align-items:center; justify-content:center; gap:7px; color:#ecf9d6 !important; background:linear-gradient(100deg,#4a7a16,#355c0f); padding:9px 13px; border:1px solid #87a95444; border-radius:2px; font-size:12px; line-height:1.4; text-decoration:none; transition:filter .2s,transform .2s; white-space:nowrap; }
 .buy-button:hover { filter:brightness(1.2); }
 .buy-button:disabled { opacity:.65; cursor:default; }
 .buy-button.is-owned { background:#294654; color:#bfd8e6 !important; border-color:#557a8b55; }
@@ -192,7 +192,7 @@ mark { background:#b1d65d; color:#152318; padding:0 1px; border-radius:1px; }
 .registration-stepper li { display:flex; align-items:center; gap:8px; font-size:11px; color:#97adbd; }
 .registration-stepper li>span { display:grid; place-items:center; width:25px; height:25px; background:#102333; border:1px solid #537086; border-radius:50%; font-size:10px; }
 .registration-stepper li[aria-current=step] { color:#e1f0fa; }
-.registration-stepper li[aria-current=step]>span { background:#1879b5; border-color:#58b2e7; }
+.registration-stepper li[aria-current=step]>span { background:#1268a0; border-color:#58b2e7; }
 .registration-stepper li.is-complete>span { background:#405c30; border-color:#8ba96a; color:#dcf6bd; }
 .registration-progress { font-size:10px; letter-spacing:.07em; color:#72c1ef; margin-bottom:19px; }
 .registration-form legend { font-size:21px; }
