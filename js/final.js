@@ -72,7 +72,9 @@
       content.append(tag,title,description,end,link); article.append(image,content); grid.append(article);
     }
     host.querySelector('[data-api-empty]').hidden = !loading.hidden || visible.length > 0 || !errorPanel.hidden;
-    if (errorPanel.hidden && loading.hidden) status.textContent = `Showing ${visible.length} of ${items.length} current giveaways · ${platform.options[platform.selectedIndex].text}`;
+    // The option may be displayed in RU/KZ; keep the English label so js/i18n.js can translate the whole line.
+    const label = platform.options[platform.selectedIndex].text;
+    if (errorPanel.hidden && loading.hidden) status.textContent = `Showing ${visible.length} of ${items.length} current giveaways · ${window.HUB_I18N?.source(label) || label}`;
   }
   // Fetches offers for the selected platform: shows a loading state, times out after 12 s,
   // and on failure shows an error with Retry plus any results cached in the last 24 hours.

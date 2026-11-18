@@ -3,6 +3,7 @@ STEAM GAME HUB - FINAL REQUIREMENTS MAP | Eggs | SE-2507
 Responsiveness (10): Bootstrap, Flexbox/Grid; 14 pages at 375/768/1440 px, both themes.
 Hosting (5): https://chinusoid.github.io/Web-SteamProject/ ; https://github.com/chinusoid/Web-SteamProject .
 Light/dark (5): js/theme-init.js, js/final.js, css/final.css; localStorage and cross-tab persistence, every page.
+Language (UX extra): js/i18n.js + js/i18n-final.js; EN/RU/KZ on every page incl. dynamic messages, saved in localStorage.
 UX/design (20): consistent game-store identity, local relevant artwork, connected navigation, labels/skip links/focus rings, readable palettes.
 Enhanced JS (25): Community signup; js/auth.js account/session/verifier; login.html credential check and redirect; profile.html stored details and logout. JS validation: required fields, email, 10-15 digit phone, complex 8-128-character password and matching confirmation. All forms use novalidate; no native constraint attributes. Dynamic catalogue search/genre/budget filters, highlighting, saved filters and empty state.
 Animated UI (5): card lift, image zoom, button transitions, spinner, toasts/progress; reduced-motion support.

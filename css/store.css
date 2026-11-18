@@ -248,3 +248,9 @@ mark { background:#b1d65d; color:#152318; padding:0 1px; border-radius:1px; }
 @media(max-width:520px) { .feature-bottom { flex-wrap:wrap; } .feature-actions { width:100%; justify-content:flex-start; } }
 .detail-purchase { display:flex; align-items:center; gap:10px; margin-top:18px; }
 .detail-rating { width:100%; margin-top:14px; }
+/* EN/RU/KZ language switcher added by js/i18n.js to the account tools. */
+.language-switcher { display:flex; align-items:center; flex:0 0 auto; }
+.language-switcher-label { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.language-switcher select { appearance:none; width:54px; height:44px; min-height:44px; padding:0; color:#e2edf4; background:#101820; border:1px solid #506176; border-radius:12px; font:inherit; font-size:15px; text-align:center; text-align-last:center; cursor:pointer; }
+.language-switcher select:focus-visible { outline:2px solid #a5dfff; outline-offset:2px; }
+@media(max-width:520px) { .language-switcher { margin-left:auto; } }

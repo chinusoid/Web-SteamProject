@@ -461,7 +461,7 @@ $(document).ready(function () {
       const game = byId.get($(this).attr('data-game'));
       return (!isLibrary || profile().owned.includes(game.id)) &&
         (genre === 'all' || genre === game.genre) && matchesPrice(game, budget) &&
-        (game.title + ' ' + game.genre).toLowerCase().includes(query.toLowerCase());
+        (game.title + ' ' + game.genre + ' ' + (window.HUB_I18N?.t(game.genre) || game.genre)).toLowerCase().includes(query.toLowerCase());
     });
     $cards.prop('hidden', true);
     $matches.prop('hidden', false);
@@ -497,7 +497,8 @@ $(document).ready(function () {
     selectedSuggestion = -1;
     $search.removeAttr('aria-activedescendant');
     if (!query) { closeSuggestions(); return; }
-    const matches = games.filter(g => (g.title + ' ' + g.genre).toLowerCase().includes(query.toLowerCase())).slice(0, 5);
+    // Suggestions also match a genre typed in the selected language (js/i18n.js).
+    const matches = games.filter(g => (g.title + ' ' + g.genre + ' ' + (window.HUB_I18N?.t(g.genre) || g.genre)).toLowerCase().includes(query.toLowerCase())).slice(0, 5);
     matches.forEach((game, index) => {
       const $option = $('<button type="button" role="option" aria-selected="false">').attr({ id: 'suggestion-' + index, 'data-suggest': game.id, tabindex: '-1' });
       $option.append($('<img alt="">').attr('src', game.image), $('<span>').html(highlighted(game.title, query)), $('<small>').text(game.cents ? money(game.cents) : 'Free'));

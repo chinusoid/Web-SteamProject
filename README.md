@@ -10,6 +10,7 @@ A continuation of the team's Assignment 6 game hub: discover games, try virtual 
 
 - 14 connected responsive pages; desktop, tablet and mobile.
 - Light/dark mode on every page, saved in localStorage and synchronized across tabs.
+- English, Russian and Kazakh interface (EN/RU/KZ switcher in the header) on all 14 pages, saved in localStorage. `js/i18n.js` holds the translation engine and the original dictionary; `js/i18n-final.js` adds the strings and phrase patterns of the final-project pages.
 - Three-step signup, credential-based login, profile details and logout.
 - Shared JavaScript rules in `js/validation.js` with inline errors: required fields, email, phone, 8–128 character complex password and matching confirmation. All wizard steps are rechecked before saving. All forms use `novalidate`; no native constraint-validation attributes.
 - Dynamic catalogue search, genre/budget filters, safe highlighting and saved filters.

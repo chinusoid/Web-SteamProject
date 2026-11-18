@@ -154,10 +154,12 @@ if (clocks.length) {
     const now = new Date();
     clocks.forEach((clock) => {
       clock.dateTime = now.toISOString();
-      clock.textContent = formatter.format(now);
+      // Uses the selected EN/RU/KZ locale when js/i18n.js is present.
+      clock.textContent = window.HUB_I18N?.localizedDateTime(now, window.HUB_I18N.language) || formatter.format(now);
     });
   };
   updateClock();
+  document.addEventListener('hub:languagechange', updateClock);
   setInterval(updateClock, 1000);
   document.addEventListener('visibilitychange', () => {
     if (!document.hidden) updateClock();

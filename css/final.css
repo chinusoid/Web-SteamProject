@@ -144,3 +144,8 @@ html[data-bs-theme=light] { color-scheme:light; --bs-body-bg:#eff4f8; --bs-body-
 [data-bs-theme=light] .team-contacts a { color:#183f5a; background:#fff; border-color:#c6d8e5; }
 [data-bs-theme=light] .team-contacts a span:first-child { color:#075c95; }
 [data-bs-theme=light] .team-contacts a:hover { color:#063b63; border-color:#075c95; }
+/* Language switcher matches the other header controls and sits next to the theme toggle. */
+.account-tools .theme-toggle { order:-2; }
+.account-tools .language-switcher { order:-1; margin-left:0; }
+.language-switcher select { width:46px; height:34px; min-height:34px; font-size:11px; color:#d6e9f6; background:#243747; border:1px solid #4a6477; border-radius:3px; }
+[data-bs-theme=light] .language-switcher select { color:#173e5a; background:#fff; border-color:#9cb8cb; }

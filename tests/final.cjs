@@ -137,6 +137,25 @@ async function check(name, action) {
    await flow.locator('#register-email').fill('FINAL.TESTER@example.com');await flow.locator('#register-phone').fill('+7 700 123 45 67');await flow.locator('[data-registration-next]').click();
    assert.match(await flow.locator('#register-email-error').textContent(),/already has an account/);
  });
+ await check('Language switcher: EN/RU/KZ on every page, saved across pages, dynamic text translated, English restored exactly',async()=>{
+   await go('games.html');const navAll=()=>flow.locator('.store-header .nav-link[href="games.html"]').textContent();
+   assert.deepEqual(await flow.locator('#site-language option').evaluateAll(o=>o.map(x=>x.value)),['kk','ru','en']);
+   await flow.locator('#site-language').selectOption('ru');
+   assert.equal(await flow.locator('html').getAttribute('lang'),'ru');assert.equal(await navAll(),'Все игры');
+   await flow.locator('[data-buy="grand-theft-auto-v"]').first().click();
+   assert.match(await flow.locator('[data-checkout-note]').textContent(),/^Виртуальная покупка/);
+   await flow.locator('[data-checkout-confirm]').click();await flow.locator('#checkout-dialog').waitFor({state:'hidden'});
+   await flow.locator('.hub-toast',{hasText:'добавлена в библиотеку'}).first().waitFor();
+   await go('profile.html');assert.equal(await flow.locator('#site-language').inputValue(),'ru');
+   assert.equal((await flow.locator('main h1').first().textContent()).trim(),'Профиль игрока');
+   await go('library.html');await flow.locator('[data-refund="grand-theft-auto-v"]').click();await flow.locator('[data-checkout-confirm]').click();
+   await flow.locator('#checkout-dialog').waitFor({state:'hidden'});assert.equal(await flow.locator('[data-wallet]').textContent(),'$100.00');
+   await flow.locator('#site-language').selectOption('kk');assert.equal(await flow.locator('html').getAttribute('lang'),'kk');
+   assert.equal(await flow.locator('.store-header .nav-link[href="games.html"]').textContent(),'Барлық ойындар');
+   await flow.locator('#site-language').selectOption('en');await go('games.html');
+   assert.equal(await navAll(),'All games');assert.equal(await flow.locator('html').getAttribute('lang'),'en');
+   assert.equal(await flow.evaluate(()=>localStorage.getItem('steam-game-hub-language')),'en');
+ });
  await check('Catalogue filters update dynamically, persist and reset; query parameters override saved filters',async()=>{
    await go('games.html');await flow.locator('#game-search').fill('Cyberpunk');
    assert.equal(await flow.locator('[data-store-catalogue] [data-game]:visible').count(),1);
