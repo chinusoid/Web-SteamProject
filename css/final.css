@@ -128,3 +128,19 @@ html[data-bs-theme=light] { color-scheme:light; --bs-body-bg:#eff4f8; --bs-body-
 @media(max-width:900px) { .account-layout { gap:28px; } .giveaway-intro { gap:25px; } .giveaway-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .giveaway-controls { grid-template-columns:1fr 1fr; } .giveaway-controls>button { grid-column:1/-1; } }
 @media(max-width:650px) { .account-layout,.profile-columns,.giveaway-intro { grid-template-columns:1fr; } .account-layout { padding-top:0; gap:24px; } .account-intro img { display:none; } .account-panel { padding:22px; } .profile-hero { flex-wrap:wrap; padding:22px; gap:16px; } .profile-hero h2 { font-size:26px; } .profile-avatar { width:65px; height:65px; font-size:30px; } .profile-hero>button { margin-left:0; } .giveaway-intro { margin-bottom:35px; } .giveaway-intro img { height:220px; } .giveaway-grid { grid-template-columns:1fr; } .giveaway-controls { gap:14px; padding:16px; } .section-top { flex-wrap:wrap; } .account-tools { flex-wrap:wrap; } .account-tools .wallet { margin-left:auto; } .theme-toggle { margin-right:0; } .account-tools .profile-button { margin-left:auto; } }
 @media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms !important; transition-duration:.01ms !important; scroll-behavior:auto !important; } }
+/* Light theme for the game details page, "More details" links and team contacts. */
+[data-bs-theme=light] .detail-button { color:#173e5a; background:#fff; border-color:#9cb8cb; }
+[data-bs-theme=light] .detail-button:hover,[data-bs-theme=light] .detail-button:focus-visible { color:#fff; background:#075c95; border-color:#075c95; }
+[data-bs-theme=light] .detail-hero,[data-bs-theme=light] .detail-error { background:linear-gradient(135deg,#fff,#dceaf5); border-color:#bdd0de; box-shadow:0 10px 24px #2a4a6322; }
+[data-bs-theme=light] .detail-art { background:#d6e4ef; }
+[data-bs-theme=light] .detail-summary>p,[data-bs-theme=light] .detail-overview,[data-bs-theme=light] .detail-error p { color:#2f4a5e; }
+[data-bs-theme=light] .detail-tags span { background:#c8deed; color:#244c67; border-color:#b3cde0; }
+[data-bs-theme=light] .detail-fact { background:#ffffffb3; border-color:#c6d8e5; }
+[data-bs-theme=light] .detail-fact span,[data-bs-theme=light] .detail-note,[data-bs-theme=light] .detail-gallery figcaption { color:#4e6578; }
+[data-bs-theme=light] .detail-fact strong { color:#102b40; }
+[data-bs-theme=light] .detail-gallery a { background:#fff; border-color:#c6d8e5; }
+[data-bs-theme=light] .detail-back { color:#075c95; }
+[data-bs-theme=light] .detail-back:hover { color:#063b63; }
+[data-bs-theme=light] .team-contacts a { color:#183f5a; background:#fff; border-color:#c6d8e5; }
+[data-bs-theme=light] .team-contacts a span:first-child { color:#075c95; }
+[data-bs-theme=light] .team-contacts a:hover { color:#063b63; border-color:#075c95; }

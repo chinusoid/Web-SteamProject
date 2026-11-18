@@ -15,15 +15,15 @@ Keep Store, All games, Profile and Live giveaways open. Keep docs/final/screensh
 
 0:00-0:35 | NURSULTAN | INTRODUCTION
 Hello. We are Team Eggs from SE-2507: Nursultan Tashkenbayev, Abulkhair Bigali, Shyngys Sultankulov and Artem Lopatkin.
-Steam Game Hub is a multi-page website for players who want to discover games and keep a personal collection. We continued our previous team project and expanded it into thirteen connected pages. Purchases use virtual funds.
+Steam Game Hub is a multi-page website for players who want to discover games and keep a personal collection. We continued our previous team project and expanded it into fourteen connected pages. Purchases use virtual funds.
 
 0:35-1:15 | NURSULTAN | DESIGN AND RESPONSIVENESS
 Action: show Store, switch Light, navigate to All games, switch back. Show mobile/tablet screenshots or resize once.
 The consistent game-store identity uses relevant artwork, blue discovery accents and green purchase controls. Cards adapt to one column on mobile. The complete interface has light and dark palettes, with the choice saved across navigation and refresh. Reduced-motion preferences are respected.
 
 1:15-2:10 | ABULKHAIR | DISCOVERY AND COLLECTION
-Action: search Cyberpunk; reset; filter Free to play; add Counter-Strike 2; confirm; rate; open Library.
-The catalogue updates while users type. Genre and price filters combine, matches are highlighted and saved filters survive reload. Each player has a one-hundred-dollar demo wallet. Confirmations show the cost and balance. Games and ratings stay in the library; returning a game refunds its virtual price. These features form a connected user journey.
+Action: search Cyberpunk; reset; filter Free to play; add Counter-Strike 2; confirm; rate; open More details on Elden Ring; open Library.
+The catalogue updates while users type. Genre and price filters combine, matches are highlighted and saved filters survive reload. Each player has a one-hundred-dollar demo wallet. Confirmations show the cost and balance. Every card opens a details page with an overview, facts and a gallery, where the game can also be bought and rated. Games and ratings stay in the library; returning a game refunds its virtual price. These features form a connected user journey.
 
 2:10-3:20 | SHYNGYS | ACCOUNT AND VALIDATION
 Action: Community signup, empty-name error, invalid email/phone, weak password, then correct sample values. Create account, open Profile, log out, log in, show Profile. Rehearse this sequence.

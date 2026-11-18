@@ -8,7 +8,7 @@ const base=(process.env.HUB_BASE_URL||'https://chinusoid.github.io/Web-SteamProj
 const output=path.join(root,'docs/final');
 const results=[],errors=[],badResponses=[],apiEvidence=[];
 const assetInventory={};
-const pages=['index.html','games.html','library.html','featured.html','categories.html','community.html','news.html','about.html','contact.html','responsive.html','login.html','profile.html','giveaways.html'];
+const pages=['index.html','games.html','library.html','featured.html','categories.html','community.html','news.html','about.html','contact.html','responsive.html','login.html','profile.html','giveaways.html','game-details.html'];
 let browser;
 async function scenario(name,fn){
  const context=await browser.newContext({viewport:{width:1440,height:1000},reducedMotion:'reduce',permissions:['clipboard-read','clipboard-write']});

@@ -52,9 +52,9 @@ async function check(name, action) {
      assert(!/\.(?:checkValidity|reportValidity|setCustomValidity)\s*\(|\.validity\b/.test(source),file+' relies on native validation');
    }
  });
- await check('13 connected pages fit desktop, tablet and mobile in both themes without JS errors',async()=>{
+ await check('14 connected pages fit desktop, tablet and mobile in both themes without JS errors',async()=>{
   const pages=(await fs.readdir(root)).filter(n=>n.endsWith('.html'));
-  assert.equal(pages.length,13);
+  assert.equal(pages.length,14);
   for(const width of [375,768,1440]) {
     await page.setViewportSize({width,height:1000});
     for(const theme of ['dark','light']){
@@ -157,6 +157,22 @@ async function check(name, action) {
    await flow.locator('[data-refund="cyberpunk-2077"]').click();await flow.locator('[data-checkout-confirm]').click();await flow.locator('#checkout-dialog').waitFor({state:'hidden'});
    assert.equal(await flow.locator('[data-wallet]').textContent(),'$100.00');
    assert.equal(await flow.locator('[data-game="cyberpunk-2077"]:visible').count(),0);
+ });
+ await check('Game details: cards link to their page; details, purchase, rating and unknown games work',async()=>{
+   await go('games.html');assert.equal(await flow.locator('[data-game] .detail-button').count(),9);
+   await flow.locator('[data-game="elden-ring"] .detail-button').click();await flow.waitForURL(/game-details\.html\?game=elden-ring/);
+   await flow.waitForFunction(()=>Boolean(document.querySelector('.hub-toasts')));
+   assert.equal(await flow.locator('#game-title').textContent(),'Elden Ring');assert.equal(await flow.locator('.detail-gallery img').count(),1);
+   await flow.locator('.detail-purchase [data-buy]').click();await flow.locator('[data-checkout-confirm]').click();
+   await flow.locator('#checkout-dialog').waitFor({state:'hidden'});
+   assert.equal(await flow.locator('.detail-purchase [data-buy]').textContent(),'✓ In library');
+   assert.equal(await flow.locator('[data-wallet]').textContent(),'$40.01');
+   await flow.locator('.detail-rating label[for$="-3"]').click();
+   assert.equal(await flow.locator('.detail-rating [data-rating-value]').textContent(),'3/5');
+   await go('library.html');await flow.locator('[data-refund="elden-ring"]').click();await flow.locator('[data-checkout-confirm]').click();
+   await flow.locator('#checkout-dialog').waitFor({state:'hidden'});assert.equal(await flow.locator('[data-wallet]').textContent(),'$100.00');
+   await go('game-details.html?game=missing-game');assert.equal(await flow.locator('.detail-error h1').textContent(),'Game not found');
+   await go('index.html');assert.equal(await flow.locator('[data-feature-details]').getAttribute('href'),'game-details.html?game=dota-2');
  });
  await check('Support form validates phone and email inline; valid submission stays local',async()=>{
    await go('contact.html');await flow.locator('#contact-form [type=submit]').click();

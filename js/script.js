@@ -81,6 +81,21 @@ $(document).ready(function () {
     $body.append($('<div class="personal-rating">').attr('data-rating-for', game.id));
   });
 
+  // Every catalogue card links to its own game-details.html page, placed above the rating.
+  $('[data-game]').each(function () {
+    const $card = $(this);
+    const id = $card.attr('data-game');
+    if (!byId.has(id) || $card.find('.detail-button').length) return;
+    const $link = $('<a class="detail-button">')
+      .attr({ href: 'game-details.html?game=' + encodeURIComponent(id), 'aria-label': 'More details about ' + byId.get(id).title })
+      .text('More details');
+    const $rating = $card.find('.personal-rating').first();
+    const $purchase = $card.find('.game-purchase-row').first();
+    if ($rating.length) $link.insertBefore($rating);
+    else if ($purchase.length) $link.insertAfter($purchase);
+    else $link.appendTo($card.find('.game-copy, .card-body').first());
+  });
+
   let ratingIndex = 0;
   $('[data-rating-for]').each(function () {
     const id = $(this).attr('data-rating-for');
@@ -596,6 +611,7 @@ $(document).ready(function () {
     $('[data-feature-price]').text(game.cents ? money(game.cents) : 'Free to play');
     $('[data-feature-tags]').empty().append(slide.tags.map(tag => $('<span>').text(tag)[0]));
     $('[data-feature-buy]').attr('data-buy', slide.id);
+    $('[data-feature-details]').attr({ href: 'game-details.html?game=' + encodeURIComponent(slide.id), 'aria-label': 'More details about ' + game.title });
     $('[data-feature-index]').each(function () { $(this).attr('aria-pressed', String(Number($(this).attr('data-feature-index')) === featureIndex)); });
     renderState();
   }

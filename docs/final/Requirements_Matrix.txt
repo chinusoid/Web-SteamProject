@@ -1,6 +1,6 @@
 STEAM GAME HUB - FINAL REQUIREMENTS MAP | Eggs | SE-2507
 
-Responsiveness (10): Bootstrap, Flexbox/Grid; 13 pages at 375/768/1440 px, both themes.
+Responsiveness (10): Bootstrap, Flexbox/Grid; 14 pages at 375/768/1440 px, both themes.
 Hosting (5): https://chinusoid.github.io/Web-SteamProject/ ; https://github.com/chinusoid/Web-SteamProject .
 Light/dark (5): js/theme-init.js, js/final.js, css/final.css; localStorage and cross-tab persistence, every page.
 UX/design (20): consistent game-store identity, local relevant artwork, connected navigation, labels/skip links/focus rings, readable palettes.

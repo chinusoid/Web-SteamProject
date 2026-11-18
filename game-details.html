@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<script src="js/theme-init.js"></script>
+<script defer src="js/validation.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steam Game Hub — Game details</title>
+<meta name="description" content="Details, tags, price and artwork for a game in the Steam Game Hub catalogue.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%23171d25'/%3E%3Ctext x='5' y='30' fill='%2366c0f4' font-size='32'%3E◉%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/store.css">
+<link rel="stylesheet" href="css/final.css">
+<script defer src="vendor/bootstrap/bootstrap.bundle.min.js">
+</script>
+<script src="vendor/jquery/jquery-4.0.0.min.js">
+</script>
+
+<script defer src="js/games-data.js">
+</script>
+<script defer src="js/site.js">
+</script>
+<script defer src="js/interactions.js">
+</script>
+<script defer src="js/auth.js"></script><script defer src="js/final.js"></script><script defer src="js/game-details.js"></script><script defer src="js/script.js">
+</script>
+</head>
+<body class="store-page">
+<a href="#main-content" class="visually-hidden-focusable skip-link btn btn-light">Skip to content</a>
+<header id="main-header" class="store-header">
+ <div class="client-strip">
+<div class="store-shell">
+<span class="client-label">◉ &nbsp;Steam Game Hub</span>
+<span>Team Eggs <span class="strip-divider">/</span> SE-2507</span>
+</div>
+</div>
+ <nav class="navbar navbar-expand-xl" aria-label="Main navigation">
+<div class="store-shell nav-inner">
+ <a class="navbar-brand" href="index.html">
+<span class="hub-symbol" aria-hidden="true">◉</span>
+<span>STEAM<span class="brand-sub">GAME HUB</span>
+</span>
+</a>
+ <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon">
+</span>
+</button>
+ <div class="collapse navbar-collapse" id="main-nav">
+<div class="navbar-nav">
+<a class="nav-link" href="index.html">Store</a>
+<a class="nav-link "  href="library.html">Library</a>
+<a class="nav-link active" aria-current="page" href="games.html">All games</a>
+<a class="nav-link "  href="featured.html">Featured</a>
+<a class="nav-link "  href="community.html">Community</a>
+<a class="nav-link "  href="news.html">News</a>
+<a class="nav-link "  href="about.html">About</a>
+<a class="nav-link "  href="contact.html">Support</a>
+</div>
+</div>
+ <div class="account-tools"><button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Switch to light mode"><span aria-hidden="true">☀</span><span data-theme-label>Light</span></button><a class="account-link" href="login.html" data-account-link>Log in</a>
+<button class="profile-button" data-open-profiles type="button" aria-haspopup="dialog">
+<span class="avatar" aria-hidden="true">P</span>
+<span data-profile-name>Player 1</span>
+<span aria-hidden="true">⌄</span>
+</button>
+<div class="wallet">
+<span class="wallet-label">DEMO WALLET</span>
+<strong data-wallet>$100.00</strong>
+</div>
+</div>
+ </div>
+</nav>
+ </header>
+ <div class="store-shell shop-bar">
+<nav aria-label="Store collections">
+<a href="games.html">Browse games</a>
+<a href="categories.html">Categories</a>
+<a href="giveaways.html">Live giveaways</a>
+</nav>
+ <form class="store-search" action="games.html" role="search" autocomplete="off" novalidate>
+<label class="visually-hidden" for="store-search">Search the store</label>
+<input id="store-search" name="q" type="search" placeholder="Search the store" role="combobox" aria-autocomplete="list" aria-controls="search-suggestions" aria-expanded="false">
+<button type="submit" aria-label="Search games">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<circle cx="10" cy="10" r="6"/>
+<path d="m15 15 5 5"/>
+</svg>
+</button>
+<ul id="search-suggestions" class="search-suggestions" role="listbox" hidden>
+</ul>
+</form>
+ <a class="library-shortcut" href="library.html">▣ &nbsp; Your library <span data-owned-count>0</span>
+</a>
+</div>
+<main id="main-content" class="store-shell store-main game-detail-page" tabindex="-1">
+<div class="game-detail-top"><p class="eyebrow">GAME DETAILS</p><a class="detail-back" href="games.html"><span aria-hidden="true">←</span> Back to all games</a></div>
+<div data-game-content aria-live="polite"><p class="detail-note">Loading game details…</p></div>
+</main>
+<footer class="store-footer">
+<div class="store-shell">
+<a class="footer-brand" href="index.html">◉ &nbsp;STEAM GAME HUB</a>
+<p>A little discovery. A new favourite. Your next adventure.</p>
+<p class="team-credit">Team Members: Ташкенбаев Нурсултан · Бигали Абулхаир · Султанкулов Шынгыс · Лопаткин Артем</p>
+<div class="footer-bottom">
+<span>Team Eggs · SE-2507 · Web Technologies I</span>
+<span>Student project · Virtual purchases only · <a href="responsive.html">Responsive showcase</a>
+</span>
+</div>
+</div>
+</footer>
+</body>
+</html>

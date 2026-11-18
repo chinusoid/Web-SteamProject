@@ -8,12 +8,13 @@ A continuation of the team's Assignment 6 game hub: discover games, try virtual 
 
 ## Final features
 
-- 13 connected responsive pages; desktop, tablet and mobile.
+- 14 connected responsive pages; desktop, tablet and mobile.
 - Light/dark mode on every page, saved in localStorage and synchronized across tabs.
 - Three-step signup, credential-based login, profile details and logout.
 - Shared JavaScript rules in `js/validation.js` with inline errors: required fields, email, phone, 8–128 character complex password and matching confirmation. All wizard steps are rechecked before saving. All forms use `novalidate`; no native constraint-validation attributes.
 - Dynamic catalogue search, genre/budget filters, safe highlighting and saved filters.
 - Player-specific virtual $100 wallets, confirmations, purchases, returns and ratings.
+- A details page for every game (overview, tags, price facts, gallery) opened from "More details" on each card and in the carousel.
 - Public GamerPower API through `fetch`/`async`/`await`: platform filters, current giveaway cards, loading/error/empty/retry and labelled cached preview.
 - Skip links, keyboard controls, focus feedback, accessible dialogs and reduced-motion support.
 
@@ -23,12 +24,13 @@ A continuation of the team's Assignment 6 game hub: discover games, try virtual 
 | --- | --- |
 | `index.html` | Featured carousel, game discovery, wallet introduction |
 | `games.html` | Nine-game searchable, filterable catalogue |
+| `game-details.html` | One game by `?game=<id>`: overview, tags, facts, gallery, buy and rate |
 | `library.html` | Active player's collection and returns |
 | `featured.html` | Highlighted games, purchases and ratings |
 | `categories.html` | Genre-based catalogue entry points |
 | `community.html` | Expandable topic previews, player-card builder, signup, gallery |
 | `news.html` | Sample stories and validated newsletter demonstration |
-| `about.html` | Project purpose, team and imagery |
+| `about.html` | Project purpose, team with email/Telegram contacts and imagery |
 | `contact.html` | Validated local support form and FAQs |
 | `responsive.html` | Standalone CSS responsive showcase |
 | `login.html` | Credential check and password visibility control |
@@ -68,7 +70,7 @@ npm run test:live
 
 The local suite starts its own server and uses isolated sample data. `npm run test:live` runs both acceptance suites directly against GitHub Pages; `HUB_BASE_URL` can select another deployed base URL. `BROWSER_PATH` may point to existing Chromium. The live API test needs internet. Results/screenshots: `docs/final/verification.json`, `docs/final/screenshots/`.
 
-Checks cover 13 pages at 375/768/1440 px in both themes, assets/anchors, signup/login/logout/profile, duplicate accounts, filters/persistence, purchases/ratings/refunds, support validation, real API access and failure/retry/empty states. Screenshots are offline presentation backup. `verification-live.json` and `published-audit.json` record the deployed checks, including all galleries, FAQs, game actions, clipboard/sound, all four API platforms and recovery/race states. Community topics expand useful sample content; related links go to real hub pages.
+Checks cover 14 pages at 375/768/1440 px in both themes, assets/anchors, signup/login/logout/profile, duplicate accounts, filters/persistence, purchases/ratings/refunds, support validation, real API access and failure/retry/empty states. Screenshots are offline presentation backup. `verification-live.json` and `published-audit.json` record the deployed checks, including all galleries, FAQs, game actions, clipboard/sound, all four API platforms and recovery/race states. Community topics expand useful sample content; related links go to real hub pages.
 
 ## Team responsibility allocation
 
